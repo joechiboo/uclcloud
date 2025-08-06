@@ -592,7 +592,7 @@ const handleLabForgotPassword = () => {
 }
 
 .container {
-  max-width: 800px;
+  max-width: min(800px, 90vw);
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -676,7 +676,7 @@ h2 {
 }
 
 .member-form.lab-form {
-  max-width: 700px;
+  max-width: min(700px, 90vw);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem 1.5rem;
@@ -894,9 +894,47 @@ h2 {
   color: white;
 }
 
+/* Tablet and larger screen adjustments */
+@media (min-width: 1200px) {
+  .container {
+    max-width: min(900px, 85vw);
+  }
+  
+  .member-form.lab-form {
+    max-width: min(800px, 85vw);
+    gap: 1.5rem 2rem;
+  }
+  
+  .forms-container {
+    padding: 3rem;
+  }
+}
+
+/* Large desktop adjustments */
+@media (min-width: 1400px) {
+  .container {
+    max-width: min(1000px, 80vw);
+  }
+  
+  .member-form.lab-form {
+    max-width: min(900px, 80vw);
+    gap: 2rem 2.5rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .member-form.lab-form {
+    grid-template-columns: 1fr;
+    max-width: min(600px, 90vw);
+  }
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .container {
     padding: 0 0.5rem;
+    max-width: 95vw;
   }
   
   h1 {
@@ -916,6 +954,17 @@ h2 {
   
   .forms-container {
     padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .member-form {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .member-form.lab-form {
+    grid-template-columns: 1fr;
+    max-width: 100%;
   }
   
   .form-options {
@@ -926,6 +975,8 @@ h2 {
   
   .modal {
     padding: 1.5rem;
+    margin: 1rem;
+    width: calc(100% - 2rem);
   }
   
   .modal-actions {
@@ -937,18 +988,8 @@ h2 {
     padding: 1.2rem 1rem;
   }
   
-  
   .member-center {
-    padding: 1rem 0;
-  }
-  
-  .forms-container {
-    padding: 1.5rem;
-  }
-  
-  .member-form.lab-form {
-    grid-template-columns: 1fr;
-    max-width: 500px;
+    padding: 0.5rem 0;
   }
 }
 </style>
