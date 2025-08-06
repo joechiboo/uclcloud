@@ -247,7 +247,7 @@ const openMap = () => {
 
 <style scoped>
 .lab-detail {
-  min-height: 100vh;
+  flex-grow: 1;
   background: #f8f9fa;
 }
 

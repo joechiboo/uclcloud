@@ -177,7 +177,7 @@ const goToDetail = (id: number) => {
 
 <style scoped>
 .lab-list {
-  min-height: 100vh;
+  flex-grow: 1;
   background: #f8f9fa;
 }
 

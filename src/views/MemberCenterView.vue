@@ -586,9 +586,13 @@ const handleLabForgotPassword = () => {
 
 <style scoped>
 .member-center {
-  min-height: auto;
+  min-height: 100%;
   background: #f8f9fa;
-  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 2rem 0;
 }
 
 .container {
@@ -989,7 +993,8 @@ h2 {
   }
   
   .member-center {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
+    min-height: calc(100vh - 200px);
   }
 }
 </style>

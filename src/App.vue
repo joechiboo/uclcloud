@@ -8,47 +8,56 @@ const showMemberDropdown = ref(false)
 </script>
 
 <template>
-  <header class="header">
-    <div class="container">
-      <RouterLink to="/" class="logo-section">
-        <img alt="聯合檢驗雲 Logo" class="logo-img" src="@/assets/logo.png" />
-      </RouterLink>
-      <nav class="nav">
-        <RouterLink to="/" class="nav-link">首頁</RouterLink>
-        <RouterLink to="/labs" class="nav-link">檢驗所列表</RouterLink>
-        <RouterLink to="/health-assistant" class="nav-link">健康小幫手</RouterLink>
-        <div class="dropdown" @mouseenter="showMemberDropdown = true" @mouseleave="showMemberDropdown = false">
-          <RouterLink 
-            to="/member-center?action=login" 
-            :class="['nav-link', 'dropdown-trigger', { active: $route.path === '/member-center' }]"
-          >
-            會員中心
-          </RouterLink>
-          <div v-show="showMemberDropdown" class="dropdown-menu">
-            <RouterLink to="/member-center?action=login" class="dropdown-item">登入</RouterLink>
-            <RouterLink to="/member-center?action=register" class="dropdown-item">註冊</RouterLink>
+  <div class="app-wrapper">
+    <header class="header">
+      <div class="container">
+        <RouterLink to="/" class="logo-section">
+          <img alt="聯合檢驗雲 Logo" class="logo-img" src="@/assets/logo.png" />
+        </RouterLink>
+        <nav class="nav">
+          <RouterLink to="/" class="nav-link">首頁</RouterLink>
+          <RouterLink to="/labs" class="nav-link">檢驗所列表</RouterLink>
+          <RouterLink to="/health-assistant" class="nav-link">健康小幫手</RouterLink>
+          <div class="dropdown" @mouseenter="showMemberDropdown = true" @mouseleave="showMemberDropdown = false">
+            <RouterLink 
+              to="/member-center?action=login" 
+              :class="['nav-link', 'dropdown-trigger', { active: $route.path === '/member-center' }]"
+            >
+              會員中心
+            </RouterLink>
+            <div v-show="showMemberDropdown" class="dropdown-menu">
+              <RouterLink to="/member-center?action=login" class="dropdown-item">登入</RouterLink>
+              <RouterLink to="/member-center?action=register" class="dropdown-item">註冊</RouterLink>
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+        </nav>
+      </div>
+    </header>
 
-  <main class="main">
-    <RouterView />
-  </main>
+    <main class="main">
+      <RouterView />
+    </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; {{ currentYear }} 聯合檢驗雲. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; {{ currentYear }} 聯合檢驗雲. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <style scoped>
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   background: #fff;
   border-bottom: 1px solid #e0e0e0;
   padding: 1rem 0;
+  flex-shrink: 0;
 }
 
 .container {
@@ -141,6 +150,9 @@ const showMemberDropdown = ref(false)
 }
 
 .main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   width: 100%;
 }
@@ -150,6 +162,8 @@ const showMemberDropdown = ref(false)
   border-top: 1px solid #e0e0e0;
   padding: 1rem 0;
   text-align: center;
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 .footer p {
