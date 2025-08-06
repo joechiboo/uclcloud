@@ -596,7 +596,7 @@ const handleLabForgotPassword = () => {
 }
 
 .container {
-  max-width: min(800px, 90vw);
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -680,7 +680,7 @@ h2 {
 }
 
 .member-form.lab-form {
-  max-width: min(700px, 90vw);
+  max-width: 700px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem 1.5rem;
@@ -900,29 +900,8 @@ h2 {
 
 /* Tablet and larger screen adjustments */
 @media (min-width: 1200px) {
-  .container {
-    max-width: min(900px, 85vw);
-  }
-  
-  .member-form.lab-form {
-    max-width: min(800px, 85vw);
-    gap: 1.5rem 2rem;
-  }
-  
   .forms-container {
     padding: 3rem;
-  }
-}
-
-/* Large desktop adjustments */
-@media (min-width: 1400px) {
-  .container {
-    max-width: min(1000px, 80vw);
-  }
-  
-  .member-form.lab-form {
-    max-width: min(900px, 80vw);
-    gap: 2rem 2.5rem;
   }
 }
 
@@ -930,7 +909,7 @@ h2 {
 @media (max-width: 1024px) {
   .member-form.lab-form {
     grid-template-columns: 1fr;
-    max-width: min(600px, 90vw);
+    max-width: 600px;
   }
 }
 
@@ -938,7 +917,6 @@ h2 {
 @media (max-width: 768px) {
   .container {
     padding: 0 0.5rem;
-    max-width: 95vw;
   }
   
   h1 {
