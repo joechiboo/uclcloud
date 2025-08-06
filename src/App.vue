@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import { computed } from 'vue'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { computed, ref } from 'vue'
 
+const route = useRoute()
 const currentYear = computed(() => new Date().getFullYear())
+const showMemberDropdown = ref(false)
 </script>
 
 <template>
@@ -14,7 +16,19 @@ const currentYear = computed(() => new Date().getFullYear())
       <nav class="nav">
         <RouterLink to="/" class="nav-link">首頁</RouterLink>
         <RouterLink to="/labs" class="nav-link">檢驗所列表</RouterLink>
-        <RouterLink to="/about" class="nav-link">關於我們</RouterLink>
+        <RouterLink to="/health-assistant" class="nav-link">健康小幫手</RouterLink>
+        <div class="dropdown" @mouseenter="showMemberDropdown = true" @mouseleave="showMemberDropdown = false">
+          <RouterLink 
+            to="/member-center?action=login" 
+            :class="['nav-link', 'dropdown-trigger', { active: $route.path === '/member-center' }]"
+          >
+            會員中心
+          </RouterLink>
+          <div v-show="showMemberDropdown" class="dropdown-menu">
+            <RouterLink to="/member-center?action=login" class="dropdown-item">登入</RouterLink>
+            <RouterLink to="/member-center?action=register" class="dropdown-item">註冊</RouterLink>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -68,6 +82,7 @@ const currentYear = computed(() => new Date().getFullYear())
 .nav {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav-link {
@@ -82,8 +97,50 @@ const currentYear = computed(() => new Date().getFullYear())
   color: #42b883;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.dropdown-trigger:hover,
+.dropdown-trigger.active,
+.dropdown-trigger.router-link-active {
+  color: #42b883;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #666;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+  background: #f8f9fa;
+  color: #42b883;
+}
+
 .main {
-  min-height: calc(100vh - 120px);
   padding: 0;
   width: 100%;
 }
@@ -113,6 +170,12 @@ const currentYear = computed(() => new Date().getFullYear())
   
   .nav {
     gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .dropdown-menu {
+    left: -50%;
+    min-width: 120px;
   }
 }
 </style>
