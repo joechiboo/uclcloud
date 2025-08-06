@@ -686,6 +686,7 @@ h2 {
   grid-template-columns: 1fr 1fr;
   gap: 1rem 1.5rem;
   width: 100%;
+  padding: 2rem;
 }
 
 .member-form.lab-form .form-options,
@@ -866,11 +867,13 @@ h2 {
 
 .member-type-half {
   display: flex;
-  margin-bottom: 0;
-  border-radius: 0;
+  margin: 0 -2.1rem 0 -2.1rem;
+  border-radius: 12px 12px 0 0;
   overflow: hidden;
   box-shadow: none;
   border-bottom: 1px solid #e0e0e0;
+  width: calc(100% + 4rem);
+  position: relative;
 }
 
 .half-btn {
@@ -903,7 +906,7 @@ h2 {
 /* Tablet and larger screen adjustments */
 @media (min-width: 1200px) {
   .forms-container {
-    padding: 3rem;
+    /* padding: 3rem; */
   }
 }
 
@@ -911,7 +914,7 @@ h2 {
 @media (max-width: 1024px) {
   .member-form.lab-form {
     grid-template-columns: 1fr;
-    max-width: 600px;
+    max-width: min(600px, 90vw);
   }
 }
 
