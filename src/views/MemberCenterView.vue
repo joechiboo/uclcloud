@@ -588,17 +588,17 @@ const handleLabForgotPassword = () => {
 .member-center {
   min-height: 100%;
   background: #f8f9fa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   flex-grow: 1;
   padding: 2rem 0;
+  display: flex;
+  align-items: center;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 1rem;
+  width: 100%;
 }
 
 h1 {
