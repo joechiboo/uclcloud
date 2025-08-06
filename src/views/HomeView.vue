@@ -140,7 +140,7 @@ const handleQuickSearch = (city: string) => {
 }
 
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #42b883 0%, #369870 100%);
   color: white;
   padding: 4rem 0;
 }
@@ -211,13 +211,13 @@ const handleQuickSearch = (city: string) => {
 .search-field input:focus,
 .search-field select:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #42b883;
 }
 
 .search-button {
   width: 100%;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #42b883 0%, #369870 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -230,7 +230,7 @@ const handleQuickSearch = (city: string) => {
 
 .search-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px rgba(66, 184, 131, 0.4);
 }
 
 .quick-search {
@@ -262,9 +262,9 @@ const handleQuickSearch = (city: string) => {
 }
 
 .city-button:hover {
-  background: #667eea;
+  background: #42b883;
   color: white;
-  border-color: #667eea;
+  border-color: #42b883;
 }
 
 .features {

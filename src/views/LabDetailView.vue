@@ -264,7 +264,7 @@ const openMap = () => {
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #667eea;
+  border-top: 4px solid #42b883;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 1rem;
@@ -306,7 +306,7 @@ const openMap = () => {
   gap: 0.5rem;
   background: #f8f9fa;
   border: 1px solid #e0e0e0;
-  color: #667eea;
+  color: #42b883;
   cursor: pointer;
   font-size: 0.95rem;
   padding: 0.75rem 1.25rem;
@@ -316,11 +316,11 @@ const openMap = () => {
 }
 
 .back-button:hover {
-  background: #667eea;
+  background: #42b883;
   color: white;
-  border-color: #667eea;
+  border-color: #42b883;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 2px 8px rgba(66, 184, 131, 0.2);
 }
 
 .back-icon {
@@ -431,7 +431,7 @@ const openMap = () => {
 
 .photo-placeholder:hover {
   background: #f0f0f0;
-  border-color: #667eea;
+  border-color: #42b883;
 }
 
 .photo-icon {
@@ -479,7 +479,7 @@ const openMap = () => {
 }
 
 .action-button {
-  background: #667eea;
+  background: #42b883;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -490,7 +490,7 @@ const openMap = () => {
 }
 
 .action-button:hover {
-  background: #5a6fd8;
+  background: #369870;
 }
 
 .services-grid {

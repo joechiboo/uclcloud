@@ -1048,7 +1048,7 @@ h1 {
 }
 
 .health-score-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #42b883 0%, #369870 100%);
   border-radius: 16px;
   padding: 2rem;
   color: white;

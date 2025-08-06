@@ -228,7 +228,7 @@ const goToDetail = (id: number) => {
 .search-field input:focus,
 .search-field select:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #42b883;
 }
 
 .search-button,
@@ -243,12 +243,12 @@ const goToDetail = (id: number) => {
 }
 
 .search-button {
-  background: #667eea;
+  background: #42b883;
   color: white;
 }
 
 .search-button:hover {
-  background: #5a6fd8;
+  background: #369870;
 }
 
 .clear-button {
@@ -301,7 +301,7 @@ const goToDetail = (id: number) => {
 .lab-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border-color: #667eea;
+  border-color: #42b883;
 }
 
 .lab-header {
@@ -362,8 +362,8 @@ const goToDetail = (id: number) => {
 }
 
 .service-tag {
-  background: #e8f2ff;
-  color: #667eea;
+  background: #e8f5e8;
+  color: #42b883;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.8rem;
@@ -393,7 +393,7 @@ const goToDetail = (id: number) => {
 }
 
 .detail-button {
-  background: #667eea;
+  background: #42b883;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -404,7 +404,7 @@ const goToDetail = (id: number) => {
 }
 
 .detail-button:hover {
-  background: #5a6fd8;
+  background: #369870;
 }
 
 @media (max-width: 768px) {
