@@ -189,40 +189,6 @@ const openMap = () => {
               </div>
             </div>
           </div>
-          
-          <div class="facilities-section">
-            <h2>設施說明</h2>
-            <div class="facilities-content">
-              <div class="facility-item">
-                <div class="facility-icon">🚗</div>
-                <div class="facility-text">
-                  <h4>停車便利</h4>
-                  <p>提供充足停車位，方便您的來訪</p>
-                </div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon">♿</div>
-                <div class="facility-text">
-                  <h4>無障礙設施</h4>
-                  <p>全面無障礙設計，照顧每位客戶需求</p>
-                </div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon">❄️</div>
-                <div class="facility-text">
-                  <h4>舒適環境</h4>
-                  <p>冷氣開放、環境清潔，提供舒適的候診體驗</p>
-                </div>
-              </div>
-              <div class="facility-item">
-                <div class="facility-icon">⚡</div>
-                <div class="facility-text">
-                  <h4>快速檢驗</h4>
-                  <p>先進設備，提供快速準確的檢驗結果</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         
         <div class="sidebar">
@@ -419,8 +385,7 @@ const openMap = () => {
 
 .photos-section,
 .info-section,
-.services-section,
-.facilities-section {
+.services-section {
   background: white;
   padding: 2rem;
   border-radius: 12px;
@@ -429,8 +394,7 @@ const openMap = () => {
 
 .photos-section h2,
 .info-section h2,
-.services-section h2,
-.facilities-section h2 {
+.services-section h2 {
   color: #333;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
@@ -482,46 +446,6 @@ const openMap = () => {
   font-weight: 500;
 }
 
-.facilities-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.facility-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-  transition: all 0.3s;
-}
-
-.facility-item:hover {
-  background: #f0f0f0;
-  transform: translateY(-1px);
-}
-
-.facility-icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  width: 40px;
-  text-align: center;
-}
-
-.facility-text h4 {
-  margin: 0 0 0.5rem 0;
-  color: #333;
-  font-size: 1rem;
-}
-
-.facility-text p {
-  margin: 0;
-  color: #666;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
 
 .info-grid {
   display: grid;
