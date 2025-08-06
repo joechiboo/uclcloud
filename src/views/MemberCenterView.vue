@@ -677,6 +677,7 @@ h2 {
   max-width: 500px;
   margin: 0 auto;
   padding: 2rem;
+  width: 100%;
 }
 
 .member-form.lab-form {
@@ -684,6 +685,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem 1.5rem;
+  width: 100%;
 }
 
 .member-form.lab-form .form-options,
@@ -940,13 +942,11 @@ h2 {
   }
   
   .member-form {
-    max-width: 100%;
     padding: 1.5rem;
   }
   
   .member-form.lab-form {
     grid-template-columns: 1fr;
-    max-width: 100%;
   }
   
   .form-options {
