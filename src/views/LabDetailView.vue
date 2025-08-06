@@ -105,6 +105,36 @@ const openMap = () => {
       
       <div class="lab-content">
         <div class="main-content">
+          <div class="photos-section">
+            <h2>檢驗所環境</h2>
+            <div class="photos-grid">
+              <div class="photo-card">
+                <div class="photo-placeholder">
+                  <span class="photo-icon">🏥</span>
+                  <p>外觀環境</p>
+                </div>
+              </div>
+              <div class="photo-card">
+                <div class="photo-placeholder">
+                  <span class="photo-icon">🔬</span>
+                  <p>檢驗設備</p>
+                </div>
+              </div>
+              <div class="photo-card">
+                <div class="photo-placeholder">
+                  <span class="photo-icon">🪑</span>
+                  <p>候診區域</p>
+                </div>
+              </div>
+              <div class="photo-card">
+                <div class="photo-placeholder">
+                  <span class="photo-icon">👨‍⚕️</span>
+                  <p>專業團隊</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div class="info-section">
             <h2>聯絡資訊</h2>
             <div class="info-grid">
@@ -156,6 +186,40 @@ const openMap = () => {
               >
                 <div class="service-icon">🔬</div>
                 <h3>{{ service }}</h3>
+              </div>
+            </div>
+          </div>
+          
+          <div class="facilities-section">
+            <h2>設施說明</h2>
+            <div class="facilities-content">
+              <div class="facility-item">
+                <div class="facility-icon">🚗</div>
+                <div class="facility-text">
+                  <h4>停車便利</h4>
+                  <p>提供充足停車位，方便您的來訪</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon">♿</div>
+                <div class="facility-text">
+                  <h4>無障礙設施</h4>
+                  <p>全面無障礙設計，照顧每位客戶需求</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon">❄️</div>
+                <div class="facility-text">
+                  <h4>舒適環境</h4>
+                  <p>冷氣開放、環境清潔，提供舒適的候診體驗</p>
+                </div>
+              </div>
+              <div class="facility-item">
+                <div class="facility-icon">⚡</div>
+                <div class="facility-text">
+                  <h4>快速檢驗</h4>
+                  <p>先進設備，提供快速準確的檢驗結果</p>
+                </div>
               </div>
             </div>
           </div>
@@ -353,19 +417,110 @@ const openMap = () => {
   gap: 2rem;
 }
 
+.photos-section,
 .info-section,
-.services-section {
+.services-section,
+.facilities-section {
   background: white;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.photos-section h2,
 .info-section h2,
-.services-section h2 {
+.services-section h2,
+.facilities-section h2 {
   color: #333;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.photo-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.photo-card:hover {
+  transform: translateY(-2px);
+}
+
+.photo-placeholder {
+  background: #f8f9fa;
+  border: 2px dashed #e0e0e0;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.photo-placeholder:hover {
+  background: #f0f0f0;
+  border-color: #667eea;
+}
+
+.photo-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.photo-placeholder p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.facilities-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.facility-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.facility-item:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.facility-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 40px;
+  text-align: center;
+}
+
+.facility-text h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.facility-text p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .info-grid {
